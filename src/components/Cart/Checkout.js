@@ -62,6 +62,13 @@ const Checkout = (props) => {
     console.log('Submitted');
     console.log(enteredName);
 
+    props.onConfirm({
+      name: enteredName,
+      street: enteredStreet,
+      city: enteredCity,
+      postalCode: enteredPostalCode
+    });
+
     resetNameInput();
     resetStreetInput();
     resetPostalCodeInput();
